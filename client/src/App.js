@@ -9,11 +9,14 @@ function App() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     axios.get("http://localhost:5000/api/users").then(r => setUsers(r.data));
-  },[])
+  }, [])
+  const addUser = (user) => {
+    axios.post("http://localhost:5000/api/users",user).then(r=>setUsers(r.data.users)).catch(e=>console.log(e));
+  }
   return (
     <>
       <List users={users} setUser={setUser}/>
-      <ViewUser user={user} />
+      <ViewUser user={user} addUser={addUser} setUsers={setUsers} />
       </>
   );
 }

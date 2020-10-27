@@ -30,13 +30,29 @@
   gap: 0.25rem;
 }
 
-button {
-  background-color: var(--f1);
-  color: var(--b2);
-  border: none;
+form > button {
+  background-color: var(--b1);
+  color: var(--e2);
+  border: 1px solid var(--e2);
+}
+form > button:disabled {
+  background-color: var(--b2);
+  border: 1px dashed var(--b1);
+  color: var(--e3);
 }
 
 h2 {
   font-size: 1.5rem;
   color: var(--e1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
 }
