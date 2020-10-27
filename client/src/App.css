@@ -1,0 +1,42 @@
+:root {
+  --b1: #222;
+  --b2: #333;
+  --f1: #eeee;
+  --f2: #fff;
+  --e1: #a7e;
+  --e2: #7e7;
+  --e3: #e77;
+}
+#root {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: var(--b1);
+  color: var(--f1);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+#root > .user-list,
+#root > .view-user {
+  background-color: var(--b2);
+  padding: 0.5rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+button {
+  background-color: var(--f1);
+  color: var(--b2);
+  border: none;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: var(--e1);
+}
