@@ -55,7 +55,7 @@ server.delete("/api/users/:id", (req, res) => {
         const id = req.params.id;
         const match = users.filter(user => user.id === id);
         if (match.length === 1) {
-            users = users.filter(user => user.id === id);
+            users = users.filter(user => user.id !== id);
             res.status(200).json(users);
         }
         else {
